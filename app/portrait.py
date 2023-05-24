@@ -23,9 +23,9 @@ class Portrait:
     
     def add_python_area(self, area_):
         if area_ != ' ':
-            img = f"../images/Snakes/{area_.replace(' ', '_')}.png"
+            img = f"./images/Snakes/{area_.replace(' ', '_')}.png"
         else:
-            img = f"../images/Snakes/AreaNone.png"
+            img = f"./images/Snakes/AreaNone.png"
         arr_img = plt.imread(img)
         imagebox = OffsetImage(arr_img, zoom=0.15)
         ab = AnnotationBbox(imagebox, (30, 245), frameon=False)
@@ -33,7 +33,7 @@ class Portrait:
 
     def add_favourite_object(self, object_):
         if object_ != ' ':
-            img = f"../images/Objects/{object_.replace(' ', '_')}.png"
+            img = f"./images/Objects/{object_.replace(' ', '_')}.png"
             arr_img = plt.imread(img)
             imagebox = OffsetImage(arr_img, zoom=0.15)
             ab = AnnotationBbox(imagebox, (-90, 245), frameon=False)
@@ -41,9 +41,9 @@ class Portrait:
 
     def add_working_preference(self, preference_):
         if preference_ != ' ':
-            img = f"../images/Snakes/{preference_.replace(' ', '_')}.png"   
+            img = f"./images/Snakes/{preference_.replace(' ', '_')}.png"   
         else:
-            img = f"../images/Snakes/RemoteNone.png"
+            img = f"./images/Snakes/RemoteNone.png"
         arr_img = plt.imread(img)
         imagebox = OffsetImage(arr_img, zoom=0.15)
         ab = AnnotationBbox(imagebox, (-190, -240), frameon=False)
@@ -51,9 +51,9 @@ class Portrait:
 
     def add_travel_distance(self, distance_):
         if distance_ != ' ':
-            img = f"../images/Distance/{distance_.replace(' ', '')}.png"  
+            img = f"./images/Distance/{distance_.replace(' ', '')}.png"  
         else:
-            img = f"../images/Distance/DistanceNone.png" 
+            img = f"./images/Distance/DistanceNone.png" 
         arr_img = plt.imread(img)
         imagebox = OffsetImage(arr_img, zoom=0.14)
         ab = AnnotationBbox(imagebox, (0, 0), frameon=False)
@@ -61,7 +61,7 @@ class Portrait:
 
     def add_water_preference(self, preference_):
         if preference_ != ' ':
-            img = f"../images/Water/{preference_.replace(' ', '_')}.png" 
+            img = f"./images/Water/{preference_.replace(' ', '_')}.png" 
             arr_img = plt.imread(img)
             imagebox = OffsetImage(arr_img, zoom=0.135)
             if preference_ == 'Black, hot and with beans':
@@ -70,7 +70,7 @@ class Portrait:
                 ab = AnnotationBbox(imagebox, (-185, -310), frameon=False)
             self.ax.add_artist(ab)
         else:
-            img = f"../images/Water/WaterNone.png" 
+            img = f"./images/Water/WaterNone.png" 
             arr_img = plt.imread(img)
             imagebox = OffsetImage(arr_img, zoom=0.135)
             ab = AnnotationBbox(imagebox, (-230, -230), frameon=False)
@@ -78,7 +78,7 @@ class Portrait:
 
     def add_games(self, preference_):
         if preference_ != ' ':
-            img = f"../images/Games/{preference_.replace(' ', '_')}.png" 
+            img = f"./images/Games/{preference_.replace(' ', '_')}.png" 
             arr_img = plt.imread(img)
             imagebox = OffsetImage(arr_img, zoom=0.25)
             ab = AnnotationBbox(imagebox, (50, 15), frameon=False)
@@ -86,9 +86,9 @@ class Portrait:
 
     def add_superpower(self, power_):
         if power_ != ' ':
-            img = f"../images/Superpower/{power_.replace(' ', '_')}.png" 
+            img = f"./images/Superpower/{power_.replace(' ', '_')}.png" 
         else:
-            img = f"../images/Superpower/PowerNone.png"
+            img = f"./images/Superpower/PowerNone.png"
         arr_img = plt.imread(img)
         imagebox = OffsetImage(arr_img, zoom=0.13)
         ab = AnnotationBbox(imagebox, (220, -240), frameon=False)
@@ -96,7 +96,7 @@ class Portrait:
 
     def add_pyladies(self, pyladies_):
         if pyladies_ == 'yes':
-            img = f"../images/Snakes/PyLadies.png"
+            img = f"./images/Snakes/PyLadies.png"
             arr_img = plt.imread(img)
             imagebox = OffsetImage(arr_img, zoom=0.13)
             ab = AnnotationBbox(imagebox, (200, 100), frameon=False)
