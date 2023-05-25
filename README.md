@@ -16,3 +16,4 @@ For the code you find:
 - `app.py`: streamlit app to play with generating different portraits easily. To run:
    'streamlit run app.py'
 
+![image](images/app_demo.gif)
