@@ -1,4 +1,5 @@
 import streamlit as st
+from pathlib import Path
 from portrait import Portrait, categories
 
 
@@ -15,17 +16,17 @@ distance = st.sidebar.selectbox('How far are  you traveling to come to Berlin?',
 superpower = st.sidebar.selectbox('If you could choose one superpower:', categories['powers'])
 game = st.sidebar.selectbox('If you had to play something, would you rather play:', categories['games'])
 
-
-p = Portrait(image_path = 'Data_Portraits/images')
+image_path = Path.cwd().parents[0]/'images'
+p = Portrait(image_path=image_path)
 fig, ax = p.fig, p.ax
 p.add_python_area(area)
-p.add_favourite_object(data_type)
-p.add_travel_distance(distance)
-p.add_water_preference(water)
-p.add_working_preference(working)
-p.add_games(game)
-p.add_pyladies(pyladies)
-p.add_superpower(superpower)
+#p.add_favourite_object(data_type)
+#p.add_travel_distance(distance)
+#p.add_water_preference(water)
+#p.add_working_preference(working)
+#p.add_games(game)
+#p.add_pyladies(pyladies)
+#p.add_superpower(superpower)
 
-st.pyplot(fig, use_container_width = True)
+st.pyplot(fig, use_container_width=True)
 

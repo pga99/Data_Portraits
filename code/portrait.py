@@ -6,7 +6,7 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 class Portrait:
     def __init__(self, image_path):
         self.fig, self.ax = self.portrait_background()
-        self.image_path = image_path
+        self.image_path = Path(image_path)
     
     def portrait_background(self):
         fig = plt.figure(figsize=(2, 1.5), dpi=300)
@@ -25,10 +25,12 @@ class Portrait:
         return fig, ax
     
     def add_python_area(self, area_):
+        path_ = Path(self.image_path)/'Snakes'
         if area_ != ' ':
-            img = f"{self.image_path}/Snakes/{area_.replace(' ', '_')}.png"
+            img = Path(path_)/f"{area_.replace(' ', '_')}.png"
+            #f"{self.image_path}/Snakes/{area_.replace(' ', '_')}.png"
         else:
-            img = f"{self.image_path}/Snakes/AreaNone.png"
+            img =  Path(path_)/'AreaNone.png'
         arr_img = plt.imread(img)
         imagebox = OffsetImage(arr_img, zoom=0.15)
         ab = AnnotationBbox(imagebox, (30, 245), frameon=False)
