@@ -17,7 +17,6 @@ superpower = st.sidebar.selectbox('If you could choose one superpower:', categor
 game = st.sidebar.selectbox('If you had to play something, would you rather play:', categories['games'])
 
 image_path = Path.cwd().parents[0]/'images'
-st.text(image_path)
 p = Portrait(image_path=image_path)
 fig, ax = p.fig, p.ax
 p.add_python_area(area)
