@@ -16,8 +16,11 @@ distance = st.sidebar.selectbox('How far are  you traveling to come to Berlin?',
 superpower = st.sidebar.selectbox('If you could choose one superpower:', categories['powers'])
 game = st.sidebar.selectbox('If you had to play something, would you rather play:', categories['games'])
 
-image_path = Path('Data_Portraits/images')
-st.text(image_path)
+dir = path.Path(__file__).abspath()
+sys.append.path(dir.parent.parent)
+st.text(dir)
+#image_path = Path('Data_Portraits/images')
+#st.text(image_path)
 p = Portrait(image_path=image_path)
 fig, ax = p.fig, p.ax
 p.add_python_area(area)
