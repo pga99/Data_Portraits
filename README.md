@@ -10,7 +10,9 @@ The harder parts of developing the Data portraits are:
 Here is the final design with the encodings.
 ![image](images/Portrait_Design.png)
 
-The code is a simple class (Portrait) with functions to sequentially add the images corresponding to the answers to a plot with matplotlin. There is a notebook file that shows how to call the different elements. 
-
-You can play with the Portrait Generator in this streamlit app. 
+For the code you find: 
+- 'portrait.py': contains a simple class (Portrait) with functions to sequentially add the images corresponding to the answers to a plot with 'matplotlib'. 
+- 'portrait_test.ipynb': notebook file that shows how to call the different elements to create the portrait
+- 'app.py': streamlit app to play with generating different portraits easily. To run:
+   'streamlit run app.py'
 
